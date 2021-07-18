@@ -418,7 +418,7 @@
 <li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2414">https://www.luogu.com.cn/problem/P2414</a></li>
 </ul>
 <h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><ul>
-<li><p>原题意简化为：询问 $x$串在 $y$ 串中的出现次数，多组询问</p>
+<li><p>原题意简化为：询问 $x$ 串在 $y$ 串中的出现次数，多组询问</p>
 </li>
 <li><p>输入多个串的方式构成一棵 $trie$ 树，加入一个字符相当于从当前节点往下走一层，$P$ 标记当前节点为一个串的结尾 $B$ 返回父亲节点。不只应用于 $trie$ 树，这种输入 $dfs$ 序方法建树的套路，遇到不止一次了</p>
 </li>
@@ -432,7 +432,7 @@
 </li>
 <li><p>考虑逆问题，在 $x$ 的 $fail$ 子树内，有多少个结点是y串在trie树的节点</p>
 </li>
-<li><p>我们知道子树问题可以转化为区间问题，对于节点 $x$ ，我们询问在 $fail$ 树上，入栈序和出栈序的区间 $[in[x], out[x]]$</p>
+<li><p>我们知道子树问题可以转化为区间问题，对于节点 $x$，我们询问在 $fail$ 树上，入栈序和出栈序的区间 $[in[x], out[x]]$</p>
 </li>
 <li><p>在线处理询问，破坏了已经建成的 $trie$ 树的顺序和完整性，重复插入字符时间空间无法接受，考虑离线处理，按建 $trie$ 树每个串出现的顺序排序。算法呼之欲出了</p>
 </li>
@@ -441,7 +441,7 @@
 <li>建出 $trie$、$fail$ 树，遍历 $fail$ 树得 $dfs$ 序</li>
 <li>对询问按 $y$ 从小到大排序</li>
 <li>再次按输入顺序遍历 $trie$ 树，进入、退出一个节点在 $fail$ 树上对应 $dfs$ 序节点 $+1$、$-1$</li>
-<li>遇到 $P$ ，处理对当前 $y$ 的所有询问，用树状数组统计每个 $x$ 在 $fail$ 树上的子树和</li>
+<li>遇到 $P$，处理对当前 $y$ 的所有询问，用树状数组统计每个 $x$ 在 $fail$ 树上的子树和</li>
 </ol>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>$AC$ 自动机的中难题，需要有非常深入的理解，理清楚 $fail$ 树、$trie$ 树之间的关系。并想到询问离线处理，有一定数据结构基础</p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
