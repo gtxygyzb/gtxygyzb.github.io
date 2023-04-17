@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>本科生简历</title>
+      <link href="/2023/04/17/%E6%9C%AC%E7%A7%91%E7%94%9F%E7%AE%80%E5%8E%86/"/>
+      <url>/2023/04/17/%E6%9C%AC%E7%A7%91%E7%94%9F%E7%AE%80%E5%8E%86/</url>
+      
+        <content type="html"><![CDATA[<div class="row">    <embed src="./本科生简历.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 简历 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>机器学习——从最小二乘法开始</title>
       <link href="/2021/07/31/math-hw6-ML/"/>
       <url>/2021/07/31/math-hw6-ML/</url>
